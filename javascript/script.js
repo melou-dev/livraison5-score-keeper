@@ -12,6 +12,13 @@ let score1 = 0;
 let score2 = 0;
 let bestScore = 5; //by default
 
+//===============================INPUT =======================================================
+
+function loadDefaultScore() {
+    winnerScore.append(document.createTextNode( +input.value ));
+}
+
+
 //===============================PLAYER 1 ======================================================
 function CreatePlayer1Score() {
     scorePlayer1.append(document.createTextNode(score1));
