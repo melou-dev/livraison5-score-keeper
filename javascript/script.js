@@ -15,7 +15,7 @@ let bestScore = 5; //by default
 //===============================INPUT =======================================================
 
 function ShowWinnerScoreInput() {
-    winnerScore.innerText = +input.value;
+    bestScore = winnerScore.innerText = +input.value;
 }       
 
 function removeInputAfterValidated() {
@@ -40,7 +40,7 @@ function modifyPlayer1Score() {
 }
 
 function givePointToPlayer1() {
-    score1++;
+   score1++;
 }
 
 function globalScore1() {
@@ -102,3 +102,4 @@ input.addEventListener(`keypress`, createWinnerScoreByEnter);
 buttonPlayer1.addEventListener(`click`, globalScore1);
 buttonPlayer2.addEventListener(`click`, globalScore2);
 reset.addEventListener(`click`, ResetAllScore);
+window.addEventListener(`load`, ResetAllScore);
