@@ -12,15 +12,22 @@ let score1 = 0;
 let score2 = 0;
 let bestScore = 5; //by default
 
-scorePlayer1.addEventListener( `click`, () => alert(`ok Mélou`));
+//===============================PLAYER 1 ======================================================
+function CreatePlayer1Score() {
+    scorePlayer1.append(document.createTextNode(score1));
+}
 
-//function loadDefaultScore() {
-//     bestScore = winnerScore.append(document.createTextNode( +input.value ));
-//}
+function modifyPlayer1Score() {
+    scorePlayer1.innerText = score1;
+}
 
-//function SetPlayer1Score() {
- //   document.createTextNode();
-//}
+function GivePointToPlayer1() {
+    score1++;
+    }
+
+    //===============================PLAYER 1 ======================================================
+
+//function modifyPlayer1Score() {}
 
 //function SetPlayer2Score() {}
 
@@ -28,5 +35,14 @@ scorePlayer1.addEventListener( `click`, () => alert(`ok Mélou`));
 
 //function StopGametoHighterScore() {}
 
+//scorePlayer1.addEventListener( `click`, () => alert(`ok Mélou`));
 
+//
+//function createTextNodeintoSpan() {
+    //  document.createTextNode( +input.value );
+//}
+
+//function loadDefaultScore() {
+    //bestScore = winnerScore.append(document.createTextNode( +input.value ));
+//}
 
