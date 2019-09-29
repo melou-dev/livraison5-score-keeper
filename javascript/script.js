@@ -14,10 +14,18 @@ let bestScore = 5; //by default
 
 //===============================INPUT =======================================================
 
-function loadDefaultScore() {
+function ShowWinnerScoreInput() {
     winnerScore.append(document.createTextNode( +input.value ));
 }
 
+function removeInputAfterValidated() {
+    input.value = "";
+  }
+
+function CreateWinnerScoreByEnter() {
+    ShowWinnerScoreInput();
+    removeInputAfterValidated();
+}
 
 //===============================PLAYER 1 ======================================================
 function CreatePlayer1Score() {
