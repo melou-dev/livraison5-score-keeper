@@ -1,4 +1,4 @@
-# SCOPE KEEPER.
+# SCORE KEEPER - LEST PLAY  :hearts: !!!!
 
 ## What have been done.
 
@@ -12,4 +12,4 @@
  * 0 for player 1 & 2,
 
  * 5 for winner score.
- 
+
