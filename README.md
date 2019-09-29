@@ -1,4 +1,4 @@
-# SCORE KEEPER - LEST PLAY  :hearts: !!!!
+# SCORE KEEPER - LET'S PLAY  :hearts: !!!!
 
 ## What have been done.
 
