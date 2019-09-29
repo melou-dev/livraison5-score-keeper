@@ -1,4 +1,4 @@
-`use strict`
+`use strict`;
 
 const scorePlayer1 = document.querySelectorAll(`span`)[0];
 const scorePlayer2 = document.querySelectorAll(`span`)[1];
@@ -10,8 +10,23 @@ const reset = document.querySelectorAll(`button`)[2];
 
 let score1 = 0;
 let score2 = 0;
-let bestscore = 5; //by default
+let bestScore = 5; //by default
 
-function LoadDefaultScore() {}
+scorePlayer1.addEventListener( `click`, () => alert(`ok Mélou`));
 
-function create
+//function loadDefaultScore() {
+//     bestScore = winnerScore.append(document.createTextNode( +input.value ));
+//}
+
+//function SetPlayer1Score() {
+ //   document.createTextNode();
+//}
+
+//function SetPlayer2Score() {}
+
+//function ResetAllScore() {}
+
+//function StopGametoHighterScore() {}
+
+
+
