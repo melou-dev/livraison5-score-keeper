@@ -57,11 +57,29 @@ function globalScore2() {
 buttonPlayer2.addEventListener(`click`, globalScore2);
 
 
-//function modifyPlayer1Score() {}
+//===============================Reset ======================================================
 
-//function SetPlayer2Score() {}
 
-//function ResetAllScore() {}
+function ResetScore1() {
+    score1 = 0;
+    CreatePlayer1Score();
+    modifyPlayer1Score();
+}
+
+function ResetScore2() {
+    score2 = 0;
+    CreatePlayer2Score();
+    modifyPlayer2Score();
+}
+
+function ResetAllScore() {
+    ResetScore1();
+    ResetScore2();
+}
+
+reset.addEventListener(`click`, ResetAllScore);
+
+
 
 //function StopGametoHighterScore() {}
 
