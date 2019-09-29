@@ -15,19 +15,22 @@ let bestScore = 5; //by default
 //===============================INPUT =======================================================
 
 function ShowWinnerScoreInput() {
-    winnerScore.append(document.createTextNode( +input.value ));
-}
+    winnerScore.innerText = +input.value;
+}       
 
 function removeInputAfterValidated() {
-    input.value = "";
-  }
+ input.value = "";
+}
 
-function CreateWinnerScoreByEnter() {
-    ShowWinnerScoreInput();
-    removeInputAfterValidated();
+function createWinnerScoreByEnter(valid) {
+    if (valid.keyCode === 13) {
+   ShowWinnerScoreInput();
+   removeInputAfterValidated();
+    }
 }
 
 //===============================PLAYER 1 ======================================================
+
 function CreatePlayer1Score() {
     scorePlayer1.append(document.createTextNode(score1));
 }
@@ -38,16 +41,15 @@ function modifyPlayer1Score() {
 
 function givePointToPlayer1() {
     score1++;
-    }
+}
 
 function globalScore1() {
+    if (score1 <= bestScore && score2 <= bestScore) {
     CreatePlayer1Score();
     modifyPlayer1Score();
     givePointToPlayer1();
+    }
 }
-
-buttonPlayer1.addEventListener(`click`, globalScore1);
-
 
 //===============================PLAYER 2 ======================================================
 
@@ -61,19 +63,17 @@ function modifyPlayer2Score() {
 
 function givePointToPlayer2() {
     score2++;
-    }
+}
 
 function globalScore2() {
+    if (score2 <= bestScore && score1 <= bestScore) {
     CreatePlayer2Score();
     modifyPlayer2Score();
     givePointToPlayer2();
+    }
 }
 
-buttonPlayer2.addEventListener(`click`, globalScore2);
-
-
-//===============================Reset ======================================================
-
+//===============================RESET ======================================================
 
 function ResetScore1() {
     score1 = 0;
@@ -87,25 +87,18 @@ function ResetScore2() {
     modifyPlayer2Score();
 }
 
+function ResetBestScore() {
+    bestScore = 5;
+    winnerScore.innerText = bestScore;
+}
+
 function ResetAllScore() {
     ResetScore1();
     ResetScore2();
+    ResetBestScore();
 }
 
+input.addEventListener(`keypress`, createWinnerScoreByEnter);
+buttonPlayer1.addEventListener(`click`, globalScore1);
+buttonPlayer2.addEventListener(`click`, globalScore2);
 reset.addEventListener(`click`, ResetAllScore);
-
-
-
-//function StopGametoHighterScore() {}
-
-//scorePlayer1.addEventListener( `click`, () => alert(`ok Mélou`));
-
-//
-//function createTextNodeintoSpan() {
-    //  document.createTextNode( +input.value );
-//}
-
-//function loadDefaultScore() {
-    //bestScore = winnerScore.append(document.createTextNode( +input.value ));
-//}
-
